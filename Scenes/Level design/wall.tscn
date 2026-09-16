@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cc5te156nro8p"]
+
+[ext_resource type="Texture2D" uid="uid://mtedhklk1fcf" path="res://Art/Level disign/Wall.png" id="1_d155t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d155t"]
+size = Vector2(22, 32)
+
+[node name="Wall" type="Node2D" unique_id=626144401]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=674844915]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1732361200]
+shape = SubResource("RectangleShape2D_d155t")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=699114238]
+texture_repeat = 2
+texture = ExtResource("1_d155t")
+region_rect = Rect2(0, 0, 16, 164)

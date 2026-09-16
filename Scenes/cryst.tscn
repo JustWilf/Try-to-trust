@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dhb1vbrjk3y11"]
+
+[ext_resource type="Texture2D" uid="uid://24uca0xnhu52" path="res://Art/anims/Cryst/1.png" id="1_tgkkn"]
+[ext_resource type="Texture2D" uid="uid://p83qmmwcaovw" path="res://Art/anims/Cryst/2.png" id="2_0l1br"]
+[ext_resource type="Script" uid="uid://1obr1nnmkqhm" path="res://Scripts/dec_anims.gd" id="3_a0nng"]
+[ext_resource type="Texture2D" uid="uid://bm1esm4m2hc46" path="res://Art/anims/Cryst/3.png" id="3_j7cad"]
+[ext_resource type="Texture2D" uid="uid://do4wtrpcivqr5" path="res://Art/anims/Cryst/4.png" id="4_0l1br"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6hbwq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0l1br")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0l1br")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j7cad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_tgkkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j7cad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0l1br")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0l1br")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="Cryst" type="Node2D" unique_id=1847982162]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2055487754]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=919042181]
+sprite_frames = SubResource("SpriteFrames_6hbwq")
+script = ExtResource("3_a0nng")
+enable = true

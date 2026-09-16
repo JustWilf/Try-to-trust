@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dec6v4o50m5e0"]
+
+[ext_resource type="Texture2D" uid="uid://dxuj37tbeef6i" path="res://Art/Level disign/Floor2.png" id="1_hem56"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6hbwq"]
+size = Vector2(20, 138.46153)
+
+[node name="Floor" type="Node2D" unique_id=550480650]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1458553920]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2104163007]
+scale = Vector2(3.2, 0.13)
+shape = SubResource("RectangleShape2D_6hbwq")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=879437256]
+texture_repeat = 2
+texture = ExtResource("1_hem56")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 19)

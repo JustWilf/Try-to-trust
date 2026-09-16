@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://7weskuxiauga"]
+
+[ext_resource type="Theme" uid="uid://vr41ed5ds78n" path="res://Themes/white-black.tres" id="1_8ngjb"]
+
+[node name="Menu" type="Node2D" unique_id=48605719]
+
+[node name="Control" type="Control" parent="." unique_id=289619387]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="Exit" type="Button" parent="Control" unique_id=604898599]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.098000005
+anchor_top = 0.878
+anchor_right = 0.098000005
+anchor_bottom = 0.878
+offset_left = -17.36
+offset_top = -10.040009
+offset_right = 19.64
+offset_bottom = 9.959991
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8ngjb")
+theme_override_font_sizes/font_size = 8
+text = "Выйти"
+
+[node name="Settings" type="Button" parent="Control" unique_id=1369917246]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.72800004
+anchor_right = 0.125
+anchor_bottom = 0.72800004
+offset_left = -26.0
+offset_top = -10.040009
+offset_right = 26.0
+offset_bottom = 9.959991
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8ngjb")
+theme_override_font_sizes/font_size = 8
+text = "Настройки"
+
+[node name="Play" type="Button" parent="Control" unique_id=1874670183]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.097
+anchor_top = 0.578
+anchor_right = 0.097
+anchor_bottom = 0.578
+offset_left = -17.04
+offset_top = -10.040001
+offset_right = 16.96
+offset_bottom = 9.959999
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8ngjb")
+theme_override_font_sizes/font_size = 8
+text = "Играть"

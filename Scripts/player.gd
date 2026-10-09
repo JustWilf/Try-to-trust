@@ -101,7 +101,6 @@ var not_wall_slide_or_jump: bool = false
 var was_jump_pressed_in_frame: bool = false
 
 func _ready() -> void:
-	_set_camera_limit(minus_x_limit, minus_y_limit, x_limit, y_limit)
 	match wall_jump_preset:
 		1:
 			wall_jump_static_vert_strength = 100.0
@@ -117,6 +116,7 @@ func _ready() -> void:
 			wall_jump_time_limit = 0.35
 
 func _physics_process(delta: float) -> void:
+	_set_camera_limit(minus_x_limit, minus_y_limit, x_limit, y_limit)
 	_direction()
 	_update_fields(delta)
 	
@@ -171,7 +171,7 @@ func _update_fields(delta: float) -> void:
 		cayot_timer += delta
 		jump_buffer_timer -= delta
 	
-	if not Input.get_axis("left", "right"):
+	if not Input.get_axis("left", "right") and not (is_dashing or is_crouched): 
 		velocity.x = 0.0
 	
 	if is_dashing:
@@ -238,7 +238,7 @@ func _double_jump() -> void:
 		velocity.y = -jump_static_strength
 
 func _sliding(delta: float) -> void:
-	if Input.is_action_just_pressed("slide") and is_on_floor() and is_running and velocity.x != 0.0 and not is_sliding and real_slide_coldown <= 0.0:
+	if Input.is_action_just_pressed("slide") and is_on_floor() and is_running and absf(get_real_velocity().x) > 1.0 and not is_sliding and real_slide_coldown <= 0.0:
 		is_sliding = true
 		real_slide_coldown = slide_coldown
 		_set_slide_col(true)
